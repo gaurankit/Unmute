@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(xcode-select:*)",
+      "Bash(swift:*)",
+      "Bash(xcodebuild -version:*)",
+      "Bash(xcodegen version:*)",
+      "Bash(xcrun simctl:*)",
+      "Bash(xcodegen generate:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(open:*)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "WebFetch(domain:levelup.gitconnected.com)",
+      "WebFetch(domain:nilcoalescing.com)",
+      "WebFetch(domain:mjtsai.com)",
+      "WebFetch(domain:www.codewithlionel.com)",
+      "WebFetch(domain:blog.jacobstechtavern.com)"
+    ]
+  }
+}

@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		014442AF56BC07F02F2C3E4A /* UnmuteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = ECEF8F783142BFAB9C67BA6E /* UnmuteWidgetExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0EF1743EA992D2861348EB76 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A33ACE0DA2919B36B8862BD /* SwiftUI.framework */; };
+		12BF1DBD3893971C69C3D468 /* UnmuteAlarmMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3124ED4C045167098129B062 /* UnmuteAlarmMetadata.swift */; };
+		12FE055737A035CABCFD01C0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57233E3C32B1D5250D313A4C /* NotificationService.swift */; };
+		1F18AC93B9E342478442CA01 /* AlarmKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068E2B443AADF1FEDE517FA2 /* AlarmKitService.swift */; };
+		4329E1F98D8D8CFE3740A0B7 /* TimezonePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924C9325D0D67BD5ACDCB70 /* TimezonePicker.swift */; };
+		4618B8128AD2F32067A47288 /* AlarmKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A14D0003754847D8D2DC59 /* AlarmKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4E2419C323950EA959759B5F /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A244DFBF4FD8BB412547D20C /* AlarmViewModel.swift */; };
+		5FC3EC35EAE0A497A2ECD902 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF125EC2BBF9B26672D02BE9 /* WidgetKit.framework */; };
+		6B3CBC1F3F2104BEE84367F3 /* AlarmRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4CA43D08229FEA83AC2F18 /* AlarmRowView.swift */; };
+		718F0A9730CFD8CFF6CC3D25 /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F6D7E9C4F313C569025EFB /* AlarmListView.swift */; };
+		870C9018403C8D5270FFEED8 /* SoundPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC98D65DFFAC6AC52D1BA2 /* SoundPickerView.swift */; };
+		8CF1D482B88A6C6E0791EA3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FE630EE50199242FB0BFA4C /* Assets.xcassets */; };
+		956D7529FB66B9211D0B31A1 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B988D3649B8C3974F073310 /* AlarmModel.swift */; };
+		ADC852017BA17D6A16C06909 /* TimezoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E9D93794AAA55B44249535 /* TimezoneService.swift */; };
+		B5A8F1BAE4A0823CF84C2312 /* AddAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E885A1082E273F9BB0273510 /* AddAlarmView.swift */; };
+		B83CB73C0367A8924FD20239 /* UnmuteWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B621FC4725FC34549CCA11D1 /* UnmuteWidgetExtension.swift */; };
+		C7F5929EFB259D1C6C4D9C9E /* AlarmKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A14D0003754847D8D2DC59 /* AlarmKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D58BC234BD99A8A4147737F8 /* UnmuteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CCC0FCDF914BC1297D98A /* UnmuteApp.swift */; };
+		DF66464A043FE3DD7942C3E4 /* AlarmScheduling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773A37EF3B695CA601AD71C4 /* AlarmScheduling.swift */; };
+		E4C370B5FABAC8870ABEB1B6 /* UnmuteAlarmMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12363C1C05C7C502C71B2381 /* UnmuteAlarmMetadata.swift */; };
+		E9F979408865D4D1CBE7A8E9 /* AlarmSchedulerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02A2C62F7604A263EC5734 /* AlarmSchedulerFactory.swift */; };
+		EAE284F923035361F8EFDED3 /* alarm_tone.caf in Resources */ = {isa = PBXBuildFile; fileRef = F76B4889D90D3B58CA2E524A /* alarm_tone.caf */; };
+		F8E46F390DF5C5F34E6CF1E2 /* UnmuteWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E92E99DF2EC60012A029F /* UnmuteWidgetBundle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72D0221A29F951D56C4D5835 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E42F834D89E3DAA0DDBC9F7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABE332BD8B59F644D54D1263;
+			remoteInfo = UnmuteWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51B0DDD2C08D6B6A94DD7361 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				014442AF56BC07F02F2C3E4A /* UnmuteWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		068E2B443AADF1FEDE517FA2 /* AlarmKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmKitService.swift; sourceTree = "<group>"; };
+		12363C1C05C7C502C71B2381 /* UnmuteAlarmMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmuteAlarmMetadata.swift; sourceTree = "<group>"; };
+		17CC98D65DFFAC6AC52D1BA2 /* SoundPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickerView.swift; sourceTree = "<group>"; };
+		3124ED4C045167098129B062 /* UnmuteAlarmMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmuteAlarmMetadata.swift; sourceTree = "<group>"; };
+		3A33ACE0DA2919B36B8862BD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		57233E3C32B1D5250D313A4C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		5924C9325D0D67BD5ACDCB70 /* TimezonePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezonePicker.swift; sourceTree = "<group>"; };
+		5FE630EE50199242FB0BFA4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		753CCC0FCDF914BC1297D98A /* UnmuteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmuteApp.swift; sourceTree = "<group>"; };
+		773A37EF3B695CA601AD71C4 /* AlarmScheduling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduling.swift; sourceTree = "<group>"; };
+		7E02A2C62F7604A263EC5734 /* AlarmSchedulerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSchedulerFactory.swift; sourceTree = "<group>"; };
+		91A14D0003754847D8D2DC59 /* AlarmKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlarmKit.framework; path = System/Library/Frameworks/AlarmKit.framework; sourceTree = SDKROOT; };
+		961E92E99DF2EC60012A029F /* UnmuteWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmuteWidgetBundle.swift; sourceTree = "<group>"; };
+		9B988D3649B8C3974F073310 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		A244DFBF4FD8BB412547D20C /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
+		A2E9D93794AAA55B44249535 /* TimezoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimezoneService.swift; sourceTree = "<group>"; };
+		AB185E51B6A4C303AE20B201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B621FC4725FC34549CCA11D1 /* UnmuteWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmuteWidgetExtension.swift; sourceTree = "<group>"; };
+		B8F6D7E9C4F313C569025EFB /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		BD4CA43D08229FEA83AC2F18 /* AlarmRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRowView.swift; sourceTree = "<group>"; };
+		C8AAE38BC475142CDDA82E94 /* UnmuteWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UnmuteWidget.entitlements; sourceTree = "<group>"; };
+		E79615C655799A129548A448 /* Unmute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unmute.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E885A1082E273F9BB0273510 /* AddAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmView.swift; sourceTree = "<group>"; };
+		ECEF8F783142BFAB9C67BA6E /* UnmuteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UnmuteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF125EC2BBF9B26672D02BE9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F76B4889D90D3B58CA2E524A /* alarm_tone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm_tone.caf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B19BD4C0FABFECA69504AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4618B8128AD2F32067A47288 /* AlarmKit.framework in Frameworks */,
+				5FC3EC35EAE0A497A2ECD902 /* WidgetKit.framework in Frameworks */,
+				0EF1743EA992D2861348EB76 /* SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48ED58EBE9B6E5B8F12182D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7F5929EFB259D1C6C4D9C9E /* AlarmKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02EC8961D4D06630339E8E51 /* UnmuteWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AB185E51B6A4C303AE20B201 /* Info.plist */,
+				12363C1C05C7C502C71B2381 /* UnmuteAlarmMetadata.swift */,
+				C8AAE38BC475142CDDA82E94 /* UnmuteWidget.entitlements */,
+				961E92E99DF2EC60012A029F /* UnmuteWidgetBundle.swift */,
+				B621FC4725FC34549CCA11D1 /* UnmuteWidgetExtension.swift */,
+			);
+			path = UnmuteWidgetExtension;
+			sourceTree = "<group>";
+		};
+		33EC604039E5DB4AA95C57E8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6F6530067EFEA5DE2DC1B636 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F76B4889D90D3B58CA2E524A /* alarm_tone.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		7E2FE184F6A021264AC35FAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E79615C655799A129548A448 /* Unmute.app */,
+				ECEF8F783142BFAB9C67BA6E /* UnmuteWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F3F8E6BEECF5751F9B9F4A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91A14D0003754847D8D2DC59 /* AlarmKit.framework */,
+				3A33ACE0DA2919B36B8862BD /* SwiftUI.framework */,
+				EF125EC2BBF9B26672D02BE9 /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86BF6E605000A2BA432F614C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				068E2B443AADF1FEDE517FA2 /* AlarmKitService.swift */,
+				7E02A2C62F7604A263EC5734 /* AlarmSchedulerFactory.swift */,
+				773A37EF3B695CA601AD71C4 /* AlarmScheduling.swift */,
+				57233E3C32B1D5250D313A4C /* NotificationService.swift */,
+				A2E9D93794AAA55B44249535 /* TimezoneService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BAA2E37063B9DF9FCF646429 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E885A1082E273F9BB0273510 /* AddAlarmView.swift */,
+				B8F6D7E9C4F313C569025EFB /* AlarmListView.swift */,
+				BD4CA43D08229FEA83AC2F18 /* AlarmRowView.swift */,
+				17CC98D65DFFAC6AC52D1BA2 /* SoundPickerView.swift */,
+				5924C9325D0D67BD5ACDCB70 /* TimezonePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB257B6F101DA213DB9AF175 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F6530067EFEA5DE2DC1B636 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CFD2495F5E8FEDB20C3D26E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B988D3649B8C3974F073310 /* AlarmModel.swift */,
+				3124ED4C045167098129B062 /* UnmuteAlarmMetadata.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9607A6602C23E8E93A946B0 = {
+			isa = PBXGroup;
+			children = (
+				5FE630EE50199242FB0BFA4C /* Assets.xcassets */,
+				CFD2495F5E8FEDB20C3D26E1 /* Models */,
+				BB257B6F101DA213DB9AF175 /* Resources */,
+				86BF6E605000A2BA432F614C /* Services */,
+				753CCC0FCDF914BC1297D98A /* UnmuteApp.swift */,
+				02EC8961D4D06630339E8E51 /* UnmuteWidgetExtension */,
+				33EC604039E5DB4AA95C57E8 /* Utilities */,
+				F3EC5BC7DC246082B74490F1 /* ViewModels */,
+				BAA2E37063B9DF9FCF646429 /* Views */,
+				7F3F8E6BEECF5751F9B9F4A9 /* Frameworks */,
+				7E2FE184F6A021264AC35FAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3EC5BC7DC246082B74490F1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A244DFBF4FD8BB412547D20C /* AlarmViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E6063226D9CC5276B2EEB3C /* Unmute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43D25E40BCE79D90BCB945F7 /* Build configuration list for PBXNativeTarget "Unmute" */;
+			buildPhases = (
+				FD3A40E563AB31BD9042741A /* Sources */,
+				26BD1DC2C1349B611326FCB4 /* Resources */,
+				48ED58EBE9B6E5B8F12182D9 /* Frameworks */,
+				51B0DDD2C08D6B6A94DD7361 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80E6F8F32C21985135B330F9 /* PBXTargetDependency */,
+			);
+			name = Unmute;
+			packageProductDependencies = (
+			);
+			productName = Unmute;
+			productReference = E79615C655799A129548A448 /* Unmute.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABE332BD8B59F644D54D1263 /* UnmuteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9CBDAD8DF70FECC48300FC3 /* Build configuration list for PBXNativeTarget "UnmuteWidgetExtension" */;
+			buildPhases = (
+				8CF96FF919A86BA152F6CBDF /* Sources */,
+				0B19BD4C0FABFECA69504AE9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnmuteWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = UnmuteWidgetExtension;
+			productReference = ECEF8F783142BFAB9C67BA6E /* UnmuteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E42F834D89E3DAA0DDBC9F7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = DDB79C41F0D263B0A381F12A /* Build configuration list for PBXProject "Unmute" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E9607A6602C23E8E93A946B0;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E6063226D9CC5276B2EEB3C /* Unmute */,
+				ABE332BD8B59F644D54D1263 /* UnmuteWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26BD1DC2C1349B611326FCB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CF1D482B88A6C6E0791EA3A /* Assets.xcassets in Resources */,
+				EAE284F923035361F8EFDED3 /* alarm_tone.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CF96FF919A86BA152F6CBDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C370B5FABAC8870ABEB1B6 /* UnmuteAlarmMetadata.swift in Sources */,
+				F8E46F390DF5C5F34E6CF1E2 /* UnmuteWidgetBundle.swift in Sources */,
+				B83CB73C0367A8924FD20239 /* UnmuteWidgetExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3A40E563AB31BD9042741A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A8F1BAE4A0823CF84C2312 /* AddAlarmView.swift in Sources */,
+				1F18AC93B9E342478442CA01 /* AlarmKitService.swift in Sources */,
+				718F0A9730CFD8CFF6CC3D25 /* AlarmListView.swift in Sources */,
+				956D7529FB66B9211D0B31A1 /* AlarmModel.swift in Sources */,
+				6B3CBC1F3F2104BEE84367F3 /* AlarmRowView.swift in Sources */,
+				E9F979408865D4D1CBE7A8E9 /* AlarmSchedulerFactory.swift in Sources */,
+				DF66464A043FE3DD7942C3E4 /* AlarmScheduling.swift in Sources */,
+				4E2419C323950EA959759B5F /* AlarmViewModel.swift in Sources */,
+				12FE055737A035CABCFD01C0 /* NotificationService.swift in Sources */,
+				870C9018403C8D5270FFEED8 /* SoundPickerView.swift in Sources */,
+				4329E1F98D8D8CFE3740A0B7 /* TimezonePicker.swift in Sources */,
+				ADC852017BA17D6A16C06909 /* TimezoneService.swift in Sources */,
+				12BF1DBD3893971C69C3D468 /* UnmuteAlarmMetadata.swift in Sources */,
+				D58BC234BD99A8A4147737F8 /* UnmuteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80E6F8F32C21985135B330F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABE332BD8B59F644D54D1263 /* UnmuteWidgetExtension */;
+			targetProxy = 72D0221A29F951D56C4D5835 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B35ADD6CCB6A449A9FBBF11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Unmute.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = S564896SG2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3EDC89AAA6F5BB2BF4BB0BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Unmute.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = S564896SG2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A5A812CDF08F7C49CA7CFFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UNMUTE;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unmute.alarmapp;
+				PRODUCT_NAME = Unmute;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B90732646047458D6B56A0C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UNMUTE;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unmute.alarmapp;
+				PRODUCT_NAME = Unmute;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E2DF8647B2516B11C0E6F3D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = UnmuteWidgetExtension/UnmuteWidget.entitlements;
+				DEVELOPMENT_TEAM = S564896SG2;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UnmuteWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unmute.alarmapp.widget;
+				PRODUCT_MODULE_NAME = UnmuteWidgetExtension;
+				PRODUCT_NAME = UnmuteWidgetExtension;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E419488203D721BD7DDA454C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = UnmuteWidgetExtension/UnmuteWidget.entitlements;
+				DEVELOPMENT_TEAM = S564896SG2;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = UnmuteWidgetExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unmute.alarmapp.widget;
+				PRODUCT_MODULE_NAME = UnmuteWidgetExtension;
+				PRODUCT_NAME = UnmuteWidgetExtension;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43D25E40BCE79D90BCB945F7 /* Build configuration list for PBXNativeTarget "Unmute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B35ADD6CCB6A449A9FBBF11 /* Debug */,
+				3EDC89AAA6F5BB2BF4BB0BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9CBDAD8DF70FECC48300FC3 /* Build configuration list for PBXNativeTarget "UnmuteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E419488203D721BD7DDA454C /* Debug */,
+				E2DF8647B2516B11C0E6F3D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DDB79C41F0D263B0A381F12A /* Build configuration list for PBXProject "Unmute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A812CDF08F7C49CA7CFFA2 /* Debug */,
+				B90732646047458D6B56A0C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E42F834D89E3DAA0DDBC9F7A /* Project object */;
+}
