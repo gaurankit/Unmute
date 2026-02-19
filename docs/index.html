@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unmute – Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #141414;
+      --border: #262626;
+      --orange: #ff9500;
+      --text: #f5f5f5;
+      --muted: #888;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 0 16px 60px;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--orange);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 40px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 span {
+      color: var(--orange);
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      margin-bottom: 16px;
+    }
+
+    .card h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .card p + p {
+      margin-top: 12px;
+    }
+
+    .highlight {
+      background: rgba(255, 149, 0, 0.08);
+      border: 1px solid rgba(255, 149, 0, 0.25);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .highlight .icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .highlight p {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      color: #ccc;
+      font-size: 15px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    ul li::before {
+      content: "✓";
+      color: var(--orange);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="app-icon">🔔</div>
+    <h1><span>UN</span>MUTE</h1>
+    <p>Privacy Policy</p>
+  </header>
+
+  <div class="container">
+
+    <div class="highlight">
+      <div class="icon">🔒</div>
+      <p>UNMUTE does not collect, store, or transmit any personal data. Everything stays on your device.</p>
+    </div>
+
+    <div class="card">
+      <h2>Data Collection</h2>
+      <p>UNMUTE collects <strong style="color:#fff">no data whatsoever</strong>. We do not collect your name, email, location, usage statistics, or any other personal information.</p>
+    </div>
+
+    <div class="card">
+      <h2>What Stays on Your Device</h2>
+      <ul>
+        <li>All alarm data (times, labels, repeat schedules) is stored locally using SwiftData on your device only.</li>
+        <li>Alarm sounds are bundled with the app and never uploaded anywhere.</li>
+        <li>Notification permissions are managed by iOS and are never shared with us.</li>
+        <li>Timezone preferences are stored locally and never transmitted.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Third-Party Services</h2>
+      <p>UNMUTE does not integrate with any third-party analytics, advertising, crash reporting, or data services. There are no SDKs or frameworks that communicate with external servers.</p>
+    </div>
+
+    <div class="card">
+      <h2>Permissions</h2>
+      <p>UNMUTE may request the following iOS permissions:</p>
+      <ul>
+        <li><strong style="color:#fff">Notifications</strong> — Required to ring alarms at the scheduled time. No notification content is sent to any server.</li>
+        <li><strong style="color:#fff">AlarmKit (iOS 26+)</strong> — Used on supported devices for reliable alarm delivery. All scheduling happens on-device.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Children's Privacy</h2>
+      <p>UNMUTE does not collect any data from any users, including children under 13. The app is safe for all ages.</p>
+    </div>
+
+    <div class="card">
+      <h2>Changes to This Policy</h2>
+      <p>If this privacy policy ever changes, the updated version will be posted at this URL. Given the nature of the app — fully local with no data collection — we do not expect this policy to change.</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Questions about this privacy policy? Reach out via the GitHub repository:</p>
+      <p style="margin-top:10px">
+        <a href="https://github.com/gaurankit/Unmute" style="color:var(--orange);text-decoration:none">github.com/gaurankit/Unmute</a>
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Effective date: February 2026</p>
+    <p style="margin-top:6px">&copy; 2026 UNMUTE. All rights reserved.</p>
+  </footer>
+</body>
+</html>
