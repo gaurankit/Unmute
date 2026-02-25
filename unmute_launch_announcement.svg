@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="1080" height="1350" fill="#0f0c23"/>
+
+  <!-- "Now Available" text -->
+  <text x="540" y="130" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="bold" text-anchor="middle" fill="white">Now Available</text>
+
+  <!-- "UNMUTE" text in orange -->
+  <text x="540" y="270" font-family="Helvetica, Arial, sans-serif" font-size="70" font-weight="bold" text-anchor="middle" fill="#ffa500">UNMUTE</text>
+
+  <!-- App icon box - rounded rectangle -->
+  <rect x="400" y="420" width="280" height="280" rx="40" fill="#321e64" stroke="#ffa500" stroke-width="3"/>
+
+  <!-- Left bracket [ in white -->
+  <line x1="435" y1="470" x2="420" y2="470" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <line x1="420" y1="470" x2="420" y2="670" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <line x1="420" y1="670" x2="435" y2="670" stroke="white" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Right bracket ] in orange -->
+  <line x1="565" y1="470" x2="580" y2="470" stroke="#ffa500" stroke-width="8" stroke-linecap="round"/>
+  <line x1="580" y1="470" x2="580" y2="670" stroke="#ffa500" stroke-width="8" stroke-linecap="round"/>
+  <line x1="580" y1="670" x2="565" y2="670" stroke="#ffa500" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sound wave arcs to the right -->
+  <circle cx="630" cy="570" r="25" fill="none" stroke="#ffa500" stroke-width="5"/>
+  <circle cx="630" cy="570" r="50" fill="none" stroke="#ffa500" stroke-width="5" opacity="0.6"/>
+  <circle cx="630" cy="570" r="75" fill="none" stroke="#ffa500" stroke-width="5" opacity="0.3"/>
+
+  <!-- "Download on the" text -->
+  <text x="540" y="1150" font-family="Helvetica, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#c8c8c8">Download on the</text>
+
+  <!-- "App Store" text -->
+  <text x="540" y="1220" font-family="Helvetica, Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="white">App Store</text>
+</svg>

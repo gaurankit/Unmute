@@ -67,6 +67,8 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.unmute.alarmapp.widget
         PRODUCT_NAME: UnmuteWidgetExtension
         PRODUCT_MODULE_NAME: UnmuteWidgetExtension
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
         TARGETED_DEVICE_FAMILY: "1"
         SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
         SUPPORTS_MACCATALYST: false

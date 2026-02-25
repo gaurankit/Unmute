@@ -35,7 +35,7 @@ struct AlarmListView: View {
                     alarmList
                 }
             }
-            .navigationTitle("[UN]MUTE")
+            .navigationTitle("Alarms")
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

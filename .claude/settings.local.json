@@ -18,7 +18,14 @@
       "WebFetch(domain:nilcoalescing.com)",
       "WebFetch(domain:mjtsai.com)",
       "WebFetch(domain:www.codewithlionel.com)",
-      "WebFetch(domain:blog.jacobstechtavern.com)"
+      "WebFetch(domain:blog.jacobstechtavern.com)",
+      "Bash(xcrun swift-api-extract:*)",
+      "WebFetch(domain:gaurankit.github.io)",
+      "Bash(brew install:*)",
+      "Bash(convert:*)",
+      "Bash(ls:*)",
+      "Bash(file:*)",
+      "Bash(/tmp/imgenv/bin/python3:*)"
     ]
   }
 }

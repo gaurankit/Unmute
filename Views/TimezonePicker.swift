@@ -50,17 +50,21 @@ struct TimezonePicker: View {
             .searchable(text: $searchText, prompt: "Search city or country")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Local") {
+                    Button {
                         selectedTimezoneId = nil
                         dismiss()
+                    } label: {
+                        Image(systemName: "location")
+                            .foregroundStyle(.orange)
                     }
-                    .foregroundStyle(.orange)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Cancel") {
+                    Button {
                         dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundStyle(.orange)
                     }
-                    .foregroundStyle(.orange)
                 }
             }
         }

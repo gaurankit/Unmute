@@ -12,7 +12,7 @@ struct AddAlarmView: View {
     @State private var alarmType: AlarmType = .daily
     @State private var selectedTime = Date()
     @State private var selectedDate = Date()
-    @State private var label = "Alarm"
+    @State private var label = ""
     @State private var soundName = "default"
     @State private var isSnoozeEnabled = true
     @State private var snoozeDuration: SnoozeDuration = .nine
@@ -27,7 +27,9 @@ struct AddAlarmView: View {
     // Sheets
     @State private var showSoundPicker = false
     @State private var showTimezonePicker = false
+    @State private var showRepeatPicker = false
     @State private var showLimitAlert = false
+    @FocusState private var labelFocused: Bool
 
     private var isEditing: Bool { editingAlarm != nil }
 
@@ -125,8 +127,9 @@ struct AddAlarmView: View {
                     // Repeat, Label, Sound, Snooze — single section like iOS Clock
                     Section {
                         if alarmType == .daily {
-                            NavigationLink {
-                                DayPickerView(selectedDays: $repeatDays)
+                            Button {
+                                labelFocused = false
+                                showRepeatPicker = true
                             } label: {
                                 HStack {
                                     Text("Repeat")
@@ -134,22 +137,23 @@ struct AddAlarmView: View {
                                     Spacer()
                                     Text(dailyRepeatLabel)
                                         .foregroundStyle(.gray)
+                                    Image(systemName: "chevron.right")
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
                                 }
                             }
-                            .listRowBackground(Color(.systemGray6).opacity(0.15))
-                        } else {
-                            Picker("Repeat", selection: $futureRepeatOption) {
-                                ForEach(RepeatOption.allCases) { option in
-                                    Text(option.rawValue).tag(option)
-                                }
-                            }
-                            .foregroundStyle(.white)
                             .listRowBackground(Color(.systemGray6).opacity(0.15))
                         }
 
-                        TextField("Label", text: $label)
-                            .foregroundStyle(.white)
-                            .listRowBackground(Color(.systemGray6).opacity(0.15))
+                        HStack {
+                            Text("Label")
+                                .foregroundStyle(.white)
+                            TextField("Alarm", text: $label)
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.trailing)
+                                .focused($labelFocused)
+                        }
+                        .listRowBackground(Color(.systemGray6).opacity(0.15))
 
                         Button {
                             showSoundPicker = true
@@ -209,17 +213,20 @@ struct AddAlarmView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel") {
+                    Button {
                         dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundStyle(.orange)
                     }
-                    .foregroundStyle(.orange)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Save") {
+                    Button {
                         Task { await saveAlarm() }
+                    } label: {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(.orange)
                     }
-                    .fontWeight(.semibold)
-                    .foregroundStyle(.orange)
                 }
             }
             .sheet(isPresented: $showSoundPicker) {
@@ -227,6 +234,9 @@ struct AddAlarmView: View {
             }
             .sheet(isPresented: $showTimezonePicker) {
                 TimezonePicker(selectedTimezoneId: $selectedTimezoneId)
+            }
+            .sheet(isPresented: $showRepeatPicker) {
+                DayPickerView(selectedDays: $repeatDays)
             }
             .alert("Alarm Limit Reached", isPresented: $showLimitAlert) {
                 Button("OK", role: .cancel) {}
@@ -352,7 +362,7 @@ struct AddAlarmView: View {
         guard let alarm = editingAlarm else { return }
 
         alarmType = alarm.alarmType
-        label = alarm.label
+        label = alarm.label == "Alarm" ? "" : alarm.label
         soundName = alarm.soundName
         isSnoozeEnabled = alarm.isSnoozeEnabled
         snoozeDuration = alarm.snoozeDuration
@@ -381,6 +391,7 @@ struct AddAlarmView: View {
 
 struct DayPickerView: View {
     @Binding var selectedDays: Set<Int>
+    @Environment(\.dismiss) private var dismiss
 
     // 1 = Sunday, 2 = Monday, ..., 7 = Saturday
     private let days: [(id: Int, name: String)] = {
@@ -391,17 +402,9 @@ struct DayPickerView: View {
     }()
 
     var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-
-            List(days, id: \.id) { day in
-                Button {
-                    if selectedDays.contains(day.id) {
-                        selectedDays.remove(day.id)
-                    } else {
-                        selectedDays.insert(day.id)
-                    }
-                } label: {
+        NavigationStack {
+            List {
+                ForEach(days, id: \.id) { day in
                     HStack {
                         Text("Every \(day.name)")
                             .foregroundStyle(.white)
@@ -411,15 +414,35 @@ struct DayPickerView: View {
                                 .foregroundStyle(.orange)
                         }
                     }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        var updated = selectedDays
+                        if updated.contains(day.id) {
+                            updated.remove(day.id)
+                        } else {
+                            updated.insert(day.id)
+                        }
+                        selectedDays = updated
+                    }
+                    .listRowBackground(Color(.systemGray6).opacity(0.15))
                 }
-                .listRowBackground(Color(.systemGray6).opacity(0.15))
             }
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
+            .background(Color.black.ignoresSafeArea())
+            .navigationTitle("Repeat")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { dismiss() } label: {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(.orange)
+                    }
+                }
+            }
         }
-        .navigationTitle("Repeat")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarColorScheme(.dark, for: .navigationBar)
+        .preferredColorScheme(.dark)
     }
 }
 

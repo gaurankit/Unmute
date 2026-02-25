@@ -4,34 +4,9 @@ struct AlarmSound: Identifiable, Hashable {
     let id: String
     let name: String
 
+    /// Only sounds that have a real .caf file bundled in the app.
     static let allSounds: [AlarmSound] = [
-        AlarmSound(id: "default", name: "Default"),
-        AlarmSound(id: "Alarm", name: "Alarm"),
-        AlarmSound(id: "Beacon", name: "Beacon"),
-        AlarmSound(id: "Bulletin", name: "Bulletin"),
-        AlarmSound(id: "Chimes", name: "Chimes"),
-        AlarmSound(id: "Circuit", name: "Circuit"),
-        AlarmSound(id: "Constellation", name: "Constellation"),
-        AlarmSound(id: "Cosmic", name: "Cosmic"),
-        AlarmSound(id: "Crystals", name: "Crystals"),
-        AlarmSound(id: "Hillside", name: "Hillside"),
-        AlarmSound(id: "Illuminate", name: "Illuminate"),
-        AlarmSound(id: "Night Owl", name: "Night Owl"),
-        AlarmSound(id: "Opening", name: "Opening"),
-        AlarmSound(id: "Playtime", name: "Playtime"),
-        AlarmSound(id: "Presto", name: "Presto"),
-        AlarmSound(id: "Radar", name: "Radar"),
-        AlarmSound(id: "Radiate", name: "Radiate"),
-        AlarmSound(id: "Ripples", name: "Ripples"),
-        AlarmSound(id: "Sencha", name: "Sencha"),
-        AlarmSound(id: "Signal", name: "Signal"),
-        AlarmSound(id: "Silk", name: "Silk"),
-        AlarmSound(id: "Slow Rise", name: "Slow Rise"),
-        AlarmSound(id: "Stargaze", name: "Stargaze"),
-        AlarmSound(id: "Summit", name: "Summit"),
-        AlarmSound(id: "Twinkle", name: "Twinkle"),
-        AlarmSound(id: "Uplift", name: "Uplift"),
-        AlarmSound(id: "Waves", name: "Waves"),
+        AlarmSound(id: "default", name: "UNMUTE Alarm"),
     ]
 }
 
@@ -70,10 +45,12 @@ struct SoundPickerView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Done") {
+                    Button {
                         dismiss()
+                    } label: {
+                        Image(systemName: "checkmark")
+                            .foregroundStyle(.orange)
                     }
-                    .foregroundStyle(.orange)
                 }
             }
         }
